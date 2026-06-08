@@ -367,12 +367,20 @@ h1{
    remplace tout le tableau par le tien.
    ===================================================================== */
 let photos = [
-  ph(1,  8,   "Anaëlle ISOLA"),
-  ph(2,  205, "Baptiste PICHERY"),
-  ph(3,  140, "Chaima SAID"),
-  ph(4,  30,  "Denis PEYRELON"),
-  ph(5,  265, "Manon VOGLER"),
-  ph(6,  180, "Valentin HENRY"),
+  { src:"photos/img01.jpg", answer:"Evan PENNEC"},
+  { src:"photos/img02.jpg", answer:"Valentin HENRY"},
+  { src:"photos/img03.jpg", answer:"Binbing NING"},
+  { src:"photos/img04.jpg", answer:"Ludovic BUSCA"},
+  { src:"photos/img05.jpg", answer:"Aurore QUEUDEVILLE"},
+  { src:"photos/img06.jpg", answer:"Sam BAROLLET"},
+  { src:"photos/img07.jpg", answer:"Apolline SAUSSARD"},
+  { src:"photos/img08.jpg", answer:"Céline CONSTANT"},
+  { src:"photos/img09.jpg", answer:"Luan DECHERY"},
+  { src:"photos/img10.jpg", answer:"Emilien BELGERI"},
+  { src:"photos/img11.jpg", answer:"Lise PEDEMONTE"},
+  { src:"photos/img12.jpg", answer:"Lisa BOUBAKER"},
+  { src:"photos/img13.jpg", answer:"Souhayl BOUZIANE"},
+  { src:"photos/img14.jpg", answer:"Lisa BOUBAKER"},
 ];
 
 /* =====================================================================
@@ -388,11 +396,12 @@ const players = [
   "Mohamed BENMOUSSA","Mohamed EL ATROUBI","Mohamed EL KOLLI","Mohamed ELAMRAOUI",
   "Nathan DI PALMA","Nicolas MANCONE","Nicolas MANIN","Noé DUHAMEL",
   "Sam BAROLLET","Souhayl BOUZIANE","Timothée HOUDOYER","Valentin HENRY",
-  "Valentin KONCZAK","Vincent MOMIN"
+  "Valentin KONCZAK","Vincent MOMIN","Vincent PENOT","Nathan THOMAS","Nassira BOUGUESSA",
+  "Paul Llitjos", "Delphine PEYRAT-ELLUL","Dilane LONTSIE TEKOUTSAP","Timothée HOUDOYER","Héloïse HELLER"
 ].sort((a,b)=>a.localeCompare(b,'fr'));
 
 /* Mélanger l'ordre des photos à chaque partie ? */
-const SHUFFLE = true;
+const SHUFFLE = false;
 
 /* =====================================================================
    ===  Tu n'as normalement rien à toucher en dessous  =================
@@ -588,11 +597,11 @@ function finish(){
   document.getElementById('final-pct').textContent = pct;
 
   let msg;
-  if(pct === 100)     msg = "Sans-faute, tu connais ton monde 🏆";
+  if(pct === 100)     msg = "C'est long l'interco non ? 🏆";
   else if(pct >= 80)  msg = "Excellent, presque parfait 👏";
-  else if(pct >= 60)  msg = "Pas mal du tout 🙂";
-  else if(pct >= 40)  msg = "Bon… faut traîner plus à la machine à café ☕";
-  else                msg = "Aïe, tu salues qui le matin ? 🙈";
+  else if(pct >= 60)  msg = "Pas mal mais apprends à différencier les 2 Vincent 🤓 ";
+  else if(pct >= 40)  msg = "C'est seulement 2j par semaine le TT n'oublie pas ☕";
+  else                msg = "Tu connais midi popote ? 🍔";
   document.getElementById('result-msg').textContent = msg;
 }
 
